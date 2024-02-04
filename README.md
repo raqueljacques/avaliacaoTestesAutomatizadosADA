@@ -1,23 +1,28 @@
-Start do projeto:
+<h1 align="center"> Avaliação de testes unitários - ADA </h1>
 
-    yarn init -y
-    npm init -y
-    pnpm init
+Projeto de avaliação do módulo de automação de testes do curso da ADA.  
+Foi feita a criação de testes unitários e de integração.
 
-Instalação de dependencias
+# Abrir e rodar o projeto
 
-    yarn add jest @types/jest -D
-    npm i jest @types/jest -D
-    pnpm i jest @types/jest -D
+Após clonar o projeto, você pode abrir com o vscode.
 
-Iniciar Jest
+**Start do projeto**  
+npm init -y
 
-    yarn jest --init
-    npx jest --init
-    pnpm jest --init
+**Instalação de dependências**  
+npm i jest @types/jest -D
 
-Rodar o teste
+**Iniciar Jest**  
+npm jest --init
 
-    npm test
-    npm test -- --coverage
-    npm run test --verbose
+**Rodar o teste**  
+npm test  
+npm test -- --coverage  
+npm run test --verbose
+
+# Tecnologias ulizadas
+
+-   JavaScript
+-   JestJs
+-   Mongodb
