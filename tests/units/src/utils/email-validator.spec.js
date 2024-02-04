@@ -6,11 +6,11 @@ describe("Email validator test", () => {
     });
 
     test("should return true when email is valid", () => {
-        expect(emailValidator.isValid("any@email.com.br")).toBe(true);
+        expect(emailValidator.isValid("any@email.com")).toBe(true);
     });
 
     test("should return false when email is invalid", () => {
-        expect(emailValidator.isValid("anyemail.com.br")).toBe(false);
+        expect(emailValidator.isValid("anyemail.com")).toBe(false);
     });
 
     test("should return false when email is null", () => {

@@ -2,7 +2,7 @@ const UserService = require("../../../../src/services/user-service");
 const User = require("../../../../src/schemas/User");
 const InvalidPasswordException = require("../../../../src/utils/erros/InvalidPasswordException");
 
-describe("User service", () => {
+describe("User service test", () => {
     test("should create a user", async () => {
         const UserSpy = jest.spyOn(User, "create").mockResolvedValue({
             id: "any_id",
@@ -10,7 +10,7 @@ describe("User service", () => {
 
         const user = {
             name: "any_name",
-            email: "any_email@hotmail.com",
+            email: "any_email@mail.com",
             password: "any_password",
         };
 
@@ -19,19 +19,19 @@ describe("User service", () => {
         expect(id).toBeDefined();
         expect(UserSpy).toHaveBeenCalledWith({
             name: "any_name",
-            email: "any_email@hotmail.com",
+            email: "any_email@mail.com",
             password: "any_password",
         });
     });
 
     test("should check if user exists and password is correct", async () => {
         const UserSpy = jest.spyOn(User, "findOne").mockResolvedValue({
-            email: "any_email@hotmail.com",
+            email: "any_email@mail.com",
             password: "any_password",
         });
 
         const user = {
-            email: "any_email@hotmail.com",
+            email: "any_email@mail.com",
             password: "any_password",
         };
 
@@ -39,7 +39,7 @@ describe("User service", () => {
 
         expect(userExists).toBe(true);
         expect(UserSpy).toHaveBeenCalledWith({
-            email: "any_email@hotmail.com",
+            email: "any_email@mail.com",
         });
     });
 
@@ -61,12 +61,12 @@ describe("User service", () => {
 
     test("should return false when password is incorrect", async () => {
         jest.spyOn(User, "findOne").mockResolvedValue({
-            email: "any_email@hotmail.com",
+            email: "any_email@mail.com",
             password: "password",
         });
 
         const user = {
-            email: "any_email@hotmail.com",
+            email: "any_email@mail.com",
             password: "invalid_password",
         };
 

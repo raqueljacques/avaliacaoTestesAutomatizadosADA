@@ -11,6 +11,7 @@ describe("Session controller test", () => {
                 password: "any_password",
             },
         };
+
         const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -46,6 +47,7 @@ describe("Session controller test", () => {
                 password: "any_password",
             },
         };
+
         const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -92,6 +94,7 @@ describe("Session controller test", () => {
                 password: "any_password",
             },
         };
+
         const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -120,6 +123,7 @@ describe("Session controller test", () => {
                 password: "any_password",
             },
         };
+
         const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),

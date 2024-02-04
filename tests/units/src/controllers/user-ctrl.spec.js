@@ -2,16 +2,18 @@ const UserCtrl = require("../../../../src/controllers/user-ctrl");
 const UserService = require("../../../../src/services/user-service");
 const EmailValidator = require("../../../../src/utils/email-validator");
 
-describe("UserCtrl", () => {
+describe("User controller test", () => {
     test("should create a user", async () => {
         mockUser = {
             name: "any_name",
             email: "any@mail.com",
             password: "any_password",
         };
+
         const req = {
             body: mockUser,
         };
+
         const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -39,9 +41,11 @@ describe("UserCtrl", () => {
             email: "invalid_email",
             password: "any_password",
         };
+
         const req = {
             body: mockUser,
         };
+
         const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -89,6 +93,7 @@ describe("UserCtrl", () => {
             email: "any@mail.com",
             password: "any_password",
         };
+
         const req = {
             body: mockUser,
         };
@@ -116,7 +121,7 @@ describe("UserCtrl", () => {
 
     test("should change password", async () => {
         const req = {
-            userEmail: "",
+            userEmail: "any@mail.com",
         };
 
         const res = {
