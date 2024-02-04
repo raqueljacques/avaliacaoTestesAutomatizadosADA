@@ -1,9 +1,9 @@
-const User = require("../schemas/User");
-const InvalidPasswordException = require("../utils/erros/InvalidPasswordException");
+const UserSchema = require("../schemas/User");
+const InvalidPasswordException = require("../utils/errors/InvalidPasswordException");
 
 class UserService {
     static async createUser({ name, email, password }) {
-        const { id } = await User.create({
+        const { id } = await UserSchema.create({
             name,
             email,
             password,
@@ -13,7 +13,7 @@ class UserService {
     }
 
     static async userExistsAndCheckPassword({ email, password }) {
-        const user = await User.findOne({ email });
+        const user = await UserSchema.findOne({ email });
 
         if (!user) {
             return false;

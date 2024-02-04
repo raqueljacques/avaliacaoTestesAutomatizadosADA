@@ -20,3 +20,4 @@ Rodar o teste
 
     npm test
     npm test -- --coverage
+    npm run test --verbose

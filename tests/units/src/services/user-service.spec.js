@@ -1,6 +1,6 @@
 const UserService = require("../../../../src/services/user-service");
 const User = require("../../../../src/schemas/User");
-const InvalidPasswordException = require("../../../../src/utils/erros/InvalidPasswordException");
+const InvalidPasswordException = require("../../../../src/utils/errors/InvalidPasswordException");
 
 describe("User service test", () => {
     test("should create a user", async () => {
