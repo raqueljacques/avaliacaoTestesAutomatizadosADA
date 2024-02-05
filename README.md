@@ -25,4 +25,4 @@ npm run test --verbose
 
 -   JavaScript
 -   JestJs
--   Mongodb
+-   Mongoose
